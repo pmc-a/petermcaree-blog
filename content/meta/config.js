@@ -4,7 +4,7 @@ module.exports = {
   siteTitle: "Peter McAree - Personal Blog", // <title>
   shortSiteTitle: "Personal Blog", // <title> ending for posts and pages
   siteDescription: "Peter McAree's personal blog, focusing on technology, tools and others!",
-  siteUrl: "https://petermcaree.com/",
+  siteUrl: "https://petermcaree.com",
   pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",
