@@ -1,5 +1,6 @@
 ---
 title: About
+menuTitle: About
 ---
 
 Currently working for [Flexera](https://flexera.com), I’m a UI Software Engineer working with all things JavaScript! 
