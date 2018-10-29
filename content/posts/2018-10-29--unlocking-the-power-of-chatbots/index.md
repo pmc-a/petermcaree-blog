@@ -42,9 +42,19 @@ Modern day use cases for chatbots really do vary. They can range from simple QnA
 
 -- photo of DNP? --
 
-One of the most important characteristics of chatbots is that they are adaptive and versatile. No matter what industry you are in or who your target audience is - nine times out of ten, a chatbot can fit right into your solution.
+One of the most important characteristics of chatbots is that they are **adaptive and versatile**. No matter what industry you are in or who your target audience is - nine times out of ten, a chatbot can fit right into your solution.
 
 Whether you are wishing to engage more users with your service or automate an existing process, a chatbot can be as simple or as complex as you make it.
+
+## Ok, so how are these bots made then?
+
+Since the increase in popularity around chatbots, there has naturally been an increase in the number of ways they can be developed. There are a number of frameworks and SDKs out in the wild that can be used to build your bot. Most notably, four of the major players all have some sort of framework or SDK released which can be used: Microsoft, Google, Amazon and Facebook.
+
+I've mainly been focusing on using Microsoft's offering - [MS Bot Framework](https://dev.botframework.com/). It offers a really nice SDK for both Node.js and C#. Having just released a new major version (v4) of the Node.js SDK, it welcomes a lot of awesome changes - wraps up a lot of functionality it nice classes, provides a lot of interfaces to abstract most of the low-level logic away from the user.
+
+Working primarily with the Node offering of the SDK, it has good resources and there are a good few examples that they provide via GitHub repos.
+
+However, the documentation for the SDK isn't quite there yet - it's still a work in progress, so I'm sure it'll be up to speed fairly soon. Saying that, the documentation is still useful and a good reference point, I've found using them along with some of the sample repos to be a good pairing.
 
 ## Summary
 
