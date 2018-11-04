@@ -38,6 +38,10 @@ const Seo = props => {
         name="twitter:creator"
         content={config.authorTwitterAccount ? config.authorTwitterAccount : ""}
       />
+      <meta name="twitter:site" content="@PMc_A" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content="https://petermcaree.com/static/avatar-circular.93111788.png" />
     </Helmet>
   );
 };
