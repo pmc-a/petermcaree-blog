@@ -57,7 +57,7 @@ Very basic bots can be used to capture basic information about a user through a 
 
 These types of bots are typically used for streamlining and enhancing the UX around capturing basic information - like the example below for capturing reservation details:
 
-![Waterfall Dialog Results](./waterfall-results.png)
+![Waterfall Dialog Result](./waterfall-result.png)
 
 Within these dialogs, there are a number of different prompts that you can utilise to enhance the UX and simlifying their flow for data entry. Once the user has responded to 
 
