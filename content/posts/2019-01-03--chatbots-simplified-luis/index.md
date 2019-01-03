@@ -1,9 +1,11 @@
 ---
-title:  "Chatbots: Simplified"
+title:  "Chatbots: Simplified - LUIS"
 subTitle: "Conversation & AI"
-cover: chatbot-message.jpg
+cover: lightbulb-splash.jpg
 categories: "technical"
 ---
+
+![Lightbulb splash](lightbulb-splash.jpg)
 
 Following on from my [previous blog](https://petermcaree.com/unlocking-the-power-of-chatbots/), I thought it was time to give a quick introduction to getting started with chatbots - on a bit more of the technical side of things.
 
@@ -55,7 +57,6 @@ Very basic bots can be used to capture basic information about a user through a 
 
 These types of bots are typically used for streamlining and enhancing the UX around capturing basic information - like the example below for capturing reservation details:
 
-// TODO: Resize this
 ![Waterfall Dialog Results](./waterfall-results.png)
 
 Within these dialogs, there are a number of different prompts that you can utilise to enhance the UX and simlifying their flow for data entry. Once the user has responded to 
@@ -68,7 +69,7 @@ Slightly more advanced, the QnA bot is the first light touch on the artificial i
 
 Developers can interact with the specific cognitive service that Microsoft have created - [QnA Maker](https://www.qnamaker.ai/). This makes it super easy for people to create and train their QnA service that can satisfy a lot of use cases for people.
 
-// Image of QnA Maker?
+![QnA Maker](./qna-maker.png)
 
 It offloads the conditional logic in behind the scenes and means developers only really interact with (yep, you guessed it) their nicely wrapped up classes of the BotBuilder SDK.
 
@@ -80,7 +81,11 @@ LUIS being a cognitive serivce means that it is super simple to implement into a
 
 ![Simple LUIS interface](./luis-demo.gif)
 
-// TODO: Paragraph about the relationship between utterance, entities and intents
+When implementing the LUIS model, there are three concepts that you need to understand prior to developing it:
+
+* **Utterances** - the sentence that the user says/types
+* **Entities** - the noun(s) the user is referencing e.g. object, place
+* **Intent** - the action the user wants the bot to perform
 
 The main difference between QnA Maker and LUIS (apart from the granularity control) is how the response from the API is consumed by the developer.
 
@@ -159,8 +164,8 @@ async onTurn(turnContext) {
         case 'Greeting':
             await turnContext.sendActivity('Hey! Ask me something to get started.');
             break;
-        case 'GetMeetupInfo':
-            await getMeetupInfoIntent.handleIntent(turnContext);
+        case 'UpdateInfo':
+            await updateInfoIntent.handleIntent(turnContext);
             break;
     }
 }
@@ -171,6 +176,8 @@ Remember the `turnContext` object that is passed into the callback function in o
 Once we have our response, we can switch over the different intents we've defined in the LUIS web application and handle them appropriately.
 
 Critically, whenever we're ready to send a response back to the user, we use the `turnContext` object again, via the `sendActivity` function it contains.
+
+#### Plug together
 
 The final piece to the puzzle is to create an instance of our bot class inside our Node entrypoint so that we can invoke the `onTurn` function whenever the endpoint is hit:
 
@@ -185,6 +192,23 @@ app.post('/api/messages', (req, res) => {
 });
 ```
 
+And that's it! At a very basic level, these are the main components that you need to utilise to create a chatbot that interacts with LUIS.
+
 ## Summary
-* Working with Microsoft's offering, AWS, GCP etc. have their own
-* Resources: BotBuilder-Sample GitHub account
+
+Overall, intelligent chatbots are super simple to get up and running using Microsoft's BotBuilder SDK and Node.js.
+
+* I'm using Microsoft's offering for their cognitive services - AWS, GCP amongst other cloud providers will also offer similar services that you can also integrate with.
+* Cognitive services can really increase the power of your chatbot and what it can do for your indiviual use cases.
+* Use the resources available! There is an abundance of services, tutorials and frameworks out there - use them!
+
+I've included some of the resources in this [gist](https://gist.github.com/pmc-a/740a39d327e31faeca2a206c5183012e) which I'll update from time-to-time!
+
+---
+
+##### Image credits:
+
+* [Photo by Shane Rounce on Unsplash](https://unsplash.com/photos/PHKgQSGzwpw)
+* [Bot Framework - Waterfall dialogs](https://docs.microsoft.com/en-us/azure/bot-service/media/bot-builder-nodejs-dialog-manage-conversation/waterfall-results.png?view=azure-bot-service-3.0)
+* [QnA Maker - Icon](https://www.qnamaker.ai/)
+
