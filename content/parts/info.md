@@ -2,7 +2,7 @@
 title: info
 ---
 
-UI Software Engineer at [Flexera](https://www.flexera.com/) - loving all things JavaScript!
+Currently working for [Slice](https://slicelife.com), I’m a Front-End Software Engineer working with all things JavaScript! 
 
 Obsessed with Formula 1.
 
