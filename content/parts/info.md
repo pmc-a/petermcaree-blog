@@ -2,7 +2,7 @@
 title: info
 ---
 
-Currently working for [Slice](https://slicelife.com), I’m a Front-End Software Engineer working with all things JavaScript! 
+I’m a Front-End Software Engineer working with all things JavaScript! 
 
 Obsessed with Formula 1.
 
