@@ -9,7 +9,7 @@ categories: "conference, technical"
 
 Two weeks ago, I had the pleasure of attending [ReactiveConf](https://reactiveconf.com/) in Prague - a three day event focusing on bleeding-edge web technologies. Passionate and inspiring people in tech came from every corner of the Earth to attend, share their stories and spark conversation about the past, present and the future.
 
-With a packed schedule and two main tracks, I was first tasked with making difficult decisions on which talks to attend for each slot! Themes were varied throughout the event, but the more prominent ones included GraphQL, security, web assembly and testing.
+With a packed schedule and two main tracks, I was first tasked with making the difficult decision of which talks to attend for each slot! Themes were varied throughout the event, but the most prominent ones included GraphQL, security, web assembly and testing.
 
 The conference venue itself was amazing, located just on the outskirts of the city centre, it comfortably coped with the ~1500 people that were in attendance. Talks were spread across two different stages, with plenty of caffeine in between to keep everyone fuelled up and on top of their game.
 
