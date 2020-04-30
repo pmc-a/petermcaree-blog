@@ -45,9 +45,6 @@ const Index = ({ data, location }) => {
           )
         })}
       </div>
-      <Link to="/">
-        <Button marginTop="85px">Go Home</Button>
-      </Link>
     </Layout>
   )
 };
