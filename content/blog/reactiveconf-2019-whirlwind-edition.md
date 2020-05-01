@@ -16,7 +16,7 @@ All of the talks that I had managed to attend were brilliant, but the following 
 
 ## Cypress.io - the state of the art end-to-end testing tool (Gleb Bahmutov)
 
-![Gleb Bahmutov - Cypress.io presentation](assets/gleb-cypress-presentation.jpg "Gleb Bahmutov - Cypress.io presentation")
+![Gleb Bahmutov - Cypress.io presentation](/assets/gleb-cypress-presentation.jpg "Gleb Bahmutov - Cypress.io presentation")
 
 Gleb introduced his talk as a way to implement testing, without it being frustrating and providing *true* value to your application, rather than just another checkbox.
 
@@ -42,7 +42,7 @@ Write the tests that make sense for you. Don't be afraid to utilise different me
 
 ## Rethinking Design Practices (Mark Dalgleish)
 
-![Mark Dalgliesh - Design practices presentation](assets/mark-seek-.jpg "Mark Dalgliesh - Design practices presentation")
+![Mark Dalgliesh - Design practices presentation](/assets/mark-seek-.jpg "Mark Dalgliesh - Design practices presentation")
 
 Mark opened with a bold statement that he wanted to rethink design practices - focusing on how our design tools integrate with the technology we have available today.
 
@@ -66,7 +66,7 @@ Mirroring our design systems to the designers mental model is critical to succes
 
 ## Mind-reading with Intelligent & Adaptive UIs (David Khourshid)
 
-![David Khourshid - Adaptive UIs presentation](assets/david-mindreading.jpg "David Khourshid - Adaptive UIs presentation")
+![David Khourshid - Adaptive UIs presentation](/assets/david-mindreading.jpg "David Khourshid - Adaptive UIs presentation")
 
 David introduced his talk by highlighting that we need to craft a user experience that is suitable for all of our users, whether that is a new user or a poweruser of our applications.
 
@@ -93,7 +93,7 @@ Users use our applications in different ways, so why don’t we try and learn fr
 
 ## Kicking Bugs and Logging Names: Errors in JavaScript Error Reporting (Liz Krane)
 
-![Liz Krane - JS Errors presentation](assets/liz-krane-sentry-.jpg "Liz Krane - JS Errors presentation")
+![Liz Krane - JS Errors presentation](/assets/liz-krane-sentry-.jpg "Liz Krane - JS Errors presentation")
 
 Liz opened by giving an awesome history of how JavaScript has evolved, ultimately into something that it probably wasn’t initially intended for.
 
@@ -115,7 +115,7 @@ We can’t rely on users reporting the errors, we need to actively track the err
 
 ## Don’t Believe the Rumors: Writing tests for CSS is Possible (Gil Tayar)
 
-![Gil Tayar - CSS testing presentation](assets/gil-testing-.jpg "Gil Tayar - CSS testing presentation")
+![Gil Tayar - CSS testing presentation](/assets/gil-testing-.jpg "Gil Tayar - CSS testing presentation")
 
 Gil delivered a somewhat, light-hearted fun and engaging talk but with a real focus and purpose.
 
