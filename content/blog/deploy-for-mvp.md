@@ -4,7 +4,7 @@ date: 2018-02-17T20:32:57.472Z
 title: Deploy for MVP
 description: How to quickly deploy MVP projects to get it in front of your clients!
 ---
-![Rocket launch](assets/mvp-banner.jpg "Launch your next project!")
+![Rocket launch](/assets/mvp-banner.jpg "Launch your next project!")
 
 Recently, I've been working on a few personal projects both for myself and others. Naturally, after building something I have wanted to show the people involved what I had managed to create. I found myself giving them a demo just whenever I next met them in person – cracked open the laptop, spun up some services locally and demoed from my nice, familiar set up. 
 
@@ -120,7 +120,7 @@ Key takeaways:
 * Documentation and support for these PaaS providers is **extensive**. All of them have some form of "Getting started" guide that will point you in the right direction.
 * MVP development approach is critical to pivoting and adapting your ideas in order to improve them - **get your apps deployed** and get that feedback as soon as possible.
 
-![Build, Learn, Measure](assets/mvp-final.jpg "Build, Learn, Measure - launch your project!")
+![Build, Learn, Measure](/assets/mvp-final.jpg "Build, Learn, Measure - launch your project!")
 
 - - -
 

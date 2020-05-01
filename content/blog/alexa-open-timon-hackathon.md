@@ -97,4 +97,4 @@ Finally, big thanks to the [Sensible Code](http://sensiblecode.io/) guys for cur
 
 *Read more about the [TIMON project here](https://www.timon-project.eu/).*
 
-![Final](assets/win.jpg "Success! Free swag too 😎")
+![Final](/assets/win.jpg "Success! Free swag too 😎")
