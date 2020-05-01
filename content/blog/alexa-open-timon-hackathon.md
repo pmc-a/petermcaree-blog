@@ -4,7 +4,7 @@ date: 2018-01-24T01:04:24.649Z
 title: Alexa, Open Timon Hackathon
 description: Hacking an Alexa skill together with AWS Lambda and JavaScript
 ---
-![Timon Hackathon at Queens University Belfast](assets/timon-hack-tv.jpg "Timon Hackathon at Queens University Belfast")
+![Timon Hackathon at Queens University Belfast](/assets/timon-hack-tv.jpg "Timon Hackathon at Queens University Belfast")
 
 Last weekend, [Chloe](https://twitter.com/ChloeMcAteer3) and I attended the TIMON hackathon held in QUB’s computer science building. Focusing on transport and open data, TIMON is a EU funded, H2020 project which has 3 main goals:
 
@@ -22,7 +22,7 @@ Friday evening came around, we registered and listened to the introduction about
 
 We grabbed a beer and started chatting to some of the TIMON guys - to see if we could get any little gem out of them, but unfortunately they were pretty resilient!
 
-![Hackathon Registration](assets/registration.jpg "Hackathon Registration")
+![Hackathon Registration](/assets/registration.jpg "Hackathon Registration")
 
 And so, the brainstorming began. We knew we wanted to try something neither of us had worked with before, a new technology that was going to provide real value to users. We generated some ideas that could potentially have worked but quickly killed them off and moved on.
 
@@ -32,7 +32,7 @@ One of the other objectives of the project was to provide better and more effici
 
 We wanted to keep the PoC as lightweight as possible given the typical time constraints of a hackathon, so we fleshed out the idea as much as possible thinking about the future and the potential of combining the API with Alexa.
 
-![Project Planning](assets/post-it-wall.jpg "Project Planning ft. Post-Its")
+![Project Planning](/assets/post-it-wall.jpg "Project Planning ft. Post-Its")
 
 ## Flash Commute ⚡️
 
@@ -77,7 +77,7 @@ Pulling the accidents and roadworks data down from the API, we cross-referenced 
 
 Presenting towards the end, we told the story about Jill who was our typical commuter, gave a live demo (which actually worked on 3G!) and talked about our potential plans for the future.
 
-![Presenting the pitch](assets/pitching.jpg "Pitching our solution!")
+![Presenting the pitch](/assets/pitching.jpg "Pitching our solution!")
 
 The pitch went smoothly. The judges conferred and made their decision - we were delighted to find out that we had managed to scoop the **Best use of TIMON** prize! 
 
