@@ -5,7 +5,6 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-import Button from "../components/button"
 
 const Index = ({ data, location }) => { 
   const siteTitle = data.site.siteMetadata.title
@@ -14,8 +13,9 @@ const Index = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
-        title="All posts"
-        keywords={['blog', 'javascript', 'react', 'node.js', 'web development', 'software engineering']}
+        isIndexPage
+        title="PeteScript &mdash; A blog by Peter McAree"
+        keywords={['petescript', 'blog', 'javascript', 'react', 'node.js', 'web development', 'software engineering']}
       />
       <Bio />
       <div style={{ margin: "20px 0 40px" }}>
