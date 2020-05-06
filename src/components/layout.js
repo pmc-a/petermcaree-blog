@@ -14,7 +14,7 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.5),
+            ...scale(1.4),
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
@@ -62,7 +62,13 @@ class Layout extends React.Component {
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
-          <header>{header}</header>
+          <Header>
+            {header}
+            <div>
+              <NavigationLink to={'/'}>Home</NavigationLink>
+              <NavigationLink to={'/about'}>About</NavigationLink>
+            </div>
+          </Header>
           <main>{children}</main>
         </div>
         <Footer>
@@ -77,6 +83,18 @@ class Layout extends React.Component {
 
 const Wrapper = styled.div`
   min-height: 100vh;
+`
+
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+`
+
+const NavigationLink = styled(Link)`
+  box-shadow: none;
+  color: black;
+  margin-left: 5px;
+  margin-right: 5px;
 `
 
 const Footer = styled.footer`
