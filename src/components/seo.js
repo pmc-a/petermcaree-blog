@@ -53,6 +53,10 @@ function SEO({ description, isIndexPage, lang, meta, keywords, title }) {
           content: `website`,
         },
         {
+          property: 'og:image',
+          content: 'https://i.imgur.com/ylHLIk8.png',
+        },
+        {
           name: `twitter:card`,
           content: `summary_large_image`,
         },
