@@ -71,8 +71,11 @@ const Layout = ({ location, title, children }) => {
         <main>{children}</main>
       </div>
       <Footer>
-        <a href="https://creativecommons.org/licenses/by/4.0/">Copyright</a> ©{' '}
-        {new Date().getFullYear()}, Peter McAree
+        <Link to={'/'}>Home</Link> &mdash; <Link to={'/about'}>About</Link>
+        <div>
+          <a href="https://creativecommons.org/licenses/by/4.0/">Copyright</a> ©{' '}
+          {new Date().getFullYear()}, Peter McAree
+        </div>
       </Footer>
     </Wrapper>
   );
