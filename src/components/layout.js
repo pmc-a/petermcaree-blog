@@ -1,23 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-import { isMobileOrTabletDevice } from '../utils/detectDevice';
 import { rhythm, scale } from '../utils/typography';
 
 const Layout = ({ location, title, children }) => {
-  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
-
-  useEffect(() => {
-    setIsMobileOrTablet(isMobileOrTabletDevice());
-  });
-
   // eslint-disable-next-line no-undef
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
-
-  console.log({ isMobileOrTablet });
 
   if (location.pathname === rootPath) {
     header = (

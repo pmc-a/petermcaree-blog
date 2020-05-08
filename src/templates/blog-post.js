@@ -5,10 +5,15 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
+import MobileShare from '../components/mobileShare';
 import SEO from '../components/seo';
+
+import useMobileDevice from '../hooks/useMobileDevice';
 import { rhythm, scale } from '../utils/typography';
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
+  const [isMobileOrTablet] = useMobileDevice();
+
   const post = data.mdx;
   const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
@@ -62,6 +67,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           )}
         </li>
       </ul>
+      {isMobileOrTablet && <MobileShare />}
     </Layout>
   );
 };
