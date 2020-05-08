@@ -1,73 +1,90 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link, graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import Bio from '../components/bio';
+import Layout from '../components/layout';
+import MobileShare from '../components/mobileShare';
+import SEO from '../components/seo';
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.mdx
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+import useMobileDevice from '../hooks/useMobileDevice';
+import { rhythm, scale } from '../utils/typography';
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
-        <h1 style={{ borderBottom: 'none' }}>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-        <Bio />
+const BlogPostTemplate = ({ data, pageContext, location }) => {
+  const [isMobileOrTablet] = useMobileDevice();
 
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={`blog${previous.fields.slug}`} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={`blog${next.fields.slug}`} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </Layout>
-    )
-  }
-}
+  const post = data.mdx;
+  const siteTitle = data.site.siteMetadata.title;
+  const { previous, next } = pageContext;
 
-export default BlogPostTemplate
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
+      <h1 style={{ borderBottom: 'none' }}>{post.frontmatter.title}</h1>
+      <p
+        style={{
+          ...scale(-1 / 5),
+          display: `block`,
+          marginBottom: rhythm(1),
+          marginTop: rhythm(-1),
+        }}
+      >
+        {post.frontmatter.date}
+      </p>
+      <MDXRenderer>{post.body}</MDXRenderer>
+      <hr
+        style={{
+          marginBottom: rhythm(1),
+        }}
+      />
+      <Bio />
+
+      <ul
+        style={{
+          display: `flex`,
+          flexWrap: `wrap`,
+          justifyContent: `space-between`,
+          listStyle: `none`,
+          padding: 0,
+        }}
+      >
+        <li>
+          {previous && (
+            <Link to={`blog${previous.fields.slug}`} rel="prev">
+              ← {previous.frontmatter.title}
+            </Link>
+          )}
+        </li>
+        <li>
+          {next && (
+            <Link to={`blog${next.fields.slug}`} rel="next">
+              {next.frontmatter.title} →
+            </Link>
+          )}
+        </li>
+      </ul>
+      {isMobileOrTablet && (
+        <MobileShare postTitle={post.frontmatter.title} siteTitle={siteTitle} />
+      )}
+    </Layout>
+  );
+};
+
+BlogPostTemplate.propTypes = {
+  data: PropTypes.shape({
+    site: PropTypes.object.isRequired,
+    allMdx: PropTypes.object.isRequired,
+    mdx: PropTypes.object.isRequired,
+  }).isRequired,
+  location: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired,
+};
+
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -88,4 +105,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

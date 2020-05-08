@@ -1,26 +1,35 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link, graphql } from 'gatsby';
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import Bio from '../components/bio';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { rhythm } from '../utils/typography';
 
-const Index = ({ data, location }) => { 
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMdx.edges
+const Index = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMdx.edges;
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
         isIndexPage
         title="PeteScript &mdash; A blog by Peter McAree"
-        keywords={['petescript', 'blog', 'javascript', 'react', 'node.js', 'web development', 'software engineering']}
+        keywords={[
+          'petescript',
+          'blog',
+          'javascript',
+          'react',
+          'node.js',
+          'web development',
+          'software engineering',
+        ]}
       />
       <Bio />
-      <div style={{ margin: "20px 0 40px" }}>
+      <div style={{ margin: '20px 0 40px' }}>
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
+          const title = node.frontmatter.title || node.fields.slug;
           return (
             <div key={node.fields.slug} style={{ marginBottom: '3.5rem' }}>
               <h3
@@ -42,14 +51,22 @@ const Index = ({ data, location }) => {
                 }}
               />
             </div>
-          )
+          );
         })}
       </div>
     </Layout>
-  )
+  );
 };
 
-export default Index
+Index.propTypes = {
+  data: PropTypes.shape({
+    site: PropTypes.object.isRequired,
+    allMdx: PropTypes.object.isRequired,
+  }).isRequired,
+  location: PropTypes.object.isRequired,
+};
+
+export default Index;
 
 export const pageQuery = graphql`
   query {
@@ -74,4 +91,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

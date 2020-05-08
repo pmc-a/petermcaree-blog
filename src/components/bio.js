@@ -1,15 +1,15 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-import styled from "styled-components"
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Image from 'gatsby-image';
+import styled from 'styled-components';
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from '../utils/typography';
 
 const Bio = () => (
   <StaticQuery
     query={bioQuery}
     render={data => {
-      const { author, description, social } = data.site.siteMetadata
+      const { author, description, social } = data.site.siteMetadata;
       return (
         <Container>
           <Image
@@ -26,10 +26,13 @@ const Bio = () => (
             }}
           />
           <p>
-            {description} <a href={`https://twitter.com/${social.twitter}`}>Follow me on Twitter!</a>
+            {description}{' '}
+            <a href={`https://twitter.com/${social.twitter}`}>
+              Follow me on Twitter!
+            </a>
           </p>
         </Container>
-      )
+      );
     }}
   />
 );
@@ -53,12 +56,12 @@ const bioQuery = graphql`
       }
     }
   }
-`
+`;
 
 const Container = styled.div`
   display: flex;
   margin-bottom: 3.5rem;
   align-items: center;
-`
+`;
 
-export default Bio
+export default Bio;
