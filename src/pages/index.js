@@ -22,7 +22,7 @@ const Index = ({ data, location }) => {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <div key={node.fields.slug}>
+            <div key={node.fields.slug} style={{ marginBottom: '3.5rem' }}>
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),

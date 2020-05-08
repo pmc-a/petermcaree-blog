@@ -14,9 +14,10 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.4),
+            ...scale(1.5),
             marginBottom: rhythm(1.5),
             marginTop: 0,
+            borderBottom: 'none',
           }}
         >
           <Link
@@ -35,7 +36,6 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
           }}
         >
@@ -58,7 +58,7 @@ class Layout extends React.Component {
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
-            maxWidth: rhythm(24),
+            maxWidth: rhythm(40),
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
@@ -72,9 +72,7 @@ class Layout extends React.Component {
           <main>{children}</main>
         </div>
         <Footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://creativecommons.org/licenses/by/4.0/">Copyright</a> © {new Date().getFullYear()}, Peter McAree
         </Footer>
       </Wrapper>
     )
