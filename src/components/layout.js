@@ -12,44 +12,49 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <h1
+      <Link
         style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-          borderBottom: 'none',
+          display: 'flex',
+          boxShadow: `none`,
+          textDecoration: `none`,
+          color: `inherit`,
         }}
+        to={'/'}
       >
-        <Link
+        <Image src="/assets/ps-logo.png" alt="PeteScript Logo" />
+        <h1
           style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
+            ...scale(1.5),
+            marginBottom: rhythm(1.5),
+            marginTop: 0,
+            borderBottom: 'none',
           }}
-          to={'/'}
         >
           {title}
-        </Link>
-      </h1>
+        </h1>
+      </Link>
     );
   } else {
     header = (
-      <h3
+      <Link
         style={{
-          marginTop: 0,
+          display: 'flex',
+          alignItems: 'center',
+          boxShadow: `none`,
+          textDecoration: `none`,
+          color: `inherit`,
         }}
+        to={'/'}
       >
-        <Link
+        <Image src="/assets/ps-logo.png" alt="PeteScript Logo" />
+        <h3
           style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
+            marginTop: 0,
           }}
-          to={'/'}
         >
           {title}
-        </Link>
-      </h3>
+        </h3>
+      </Link>
     );
   }
   return (
@@ -62,13 +67,7 @@ const Layout = ({ location, title, children }) => {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <Header>
-          {header}
-          <div>
-            <NavigationLink to={'/'}>Home</NavigationLink>
-            <NavigationLink to={'/about'}>About</NavigationLink>
-          </div>
-        </Header>
+        <Header>{header}</Header>
         <main>{children}</main>
       </div>
       <Footer>
@@ -87,6 +86,12 @@ Layout.propTypes = {
 
 const Wrapper = styled.div`
   min-height: 100vh;
+`;
+
+const Image = styled.img`
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
 `;
 
 const Header = styled.header`
