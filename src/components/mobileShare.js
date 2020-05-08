@@ -1,9 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const MobileShare = () => {
+const MobileShare = ({ postTitle, siteTitle }) => {
   const handleOnClick = () => {
-    console.log('Click!');
+    if (navigator.share) {
+      navigator
+        .share({
+          title: `${postTitle} | ${siteTitle}`,
+          text: `Check out ${postTitle} on ${siteTitle}`,
+          url: document.location.href,
+        })
+        .then(() => {
+          console.log('Successfully shared');
+        })
+        .catch(error => {
+          console.error('Something went wrong sharing the blog', error);
+        });
+    }
   };
 
   return (
@@ -11,6 +25,11 @@ const MobileShare = () => {
       <ShareIcon />
     </Wrapper>
   );
+};
+
+MobileShare.propTypes = {
+  postTitle: PropTypes.string.isRequired,
+  siteTitle: PropTypes.string.isRequired,
 };
 
 const ShareIcon = () => (
@@ -77,7 +96,7 @@ const ShareIcon = () => (
         data-old_color="#000000"
         fill="#FFFFFF"
       />
-    </g>{' '}
+    </g>
   </svg>
 );
 

@@ -67,7 +67,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           )}
         </li>
       </ul>
-      {isMobileOrTablet && <MobileShare />}
+      {isMobileOrTablet && (
+        <MobileShare postTitle={post.frontmatter.title} siteTitle={siteTitle} />
+      )}
     </Layout>
   );
 };
