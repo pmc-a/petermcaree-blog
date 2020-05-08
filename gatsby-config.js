@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `PeteScript`,
     author: `Peter McAree`,
-    description: `Personal blog containing insights, ramblings and how to build software.`,
+    description: `Personal blog containing insights, ramblings and how to build software with JavaScript.`,
     siteUrl: `https://petermcaree.com`,
     social: {
       twitter: `PMc_A`,
