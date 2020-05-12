@@ -4,10 +4,6 @@ date: 2020-05-13T22:08:48.916Z
 title: How to build a mobile web share component with React in under 10 minutes
 description: A quick way to implement native share functionality using a simple browser API
 ---
-_Originally posted over on my [personal blog - PeteScript](https://petermcaree.com/blog/build-mobile-web-share-component-with-react)_
-
----
-
 A super important piece of functionality on any web application is providing the user with the ability to share it - be it a blog, social media post or news article.
 
 Utilising social media is vital to both dissemination of information as well as business success.
